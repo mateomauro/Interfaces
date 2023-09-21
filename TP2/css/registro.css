@@ -16,13 +16,36 @@ h3,
 h6,
 .cuerpo {
     font-family: 'Inter', sans-serif;
+    font-weight: bold;
+}
 
+label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+.label-tomas {
+    display: flex;
+    flex-direction: column;
+    color: #EFEFFF
 }
 
 .section-registro {
     width: 400px;
     height: auto;
     background-color: #00004F;
+    border: 2px solid #EFEFFF;
+}
+
+.seccion-login {
+    width: 400px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #00004F;
+    border: 2px solid #EFEFFF;
 }
 
 .formulario-registro {
@@ -83,6 +106,24 @@ input::placeholder {
     padding-left: 5%;
     color: #EFEFFF;
     opacity: 50%;
+}
+
+.form-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.olvido-contra {
+    width: 250px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: end;
+}
+
+.olvido-contraseña {
+    color: #B0B0FF;
+
 }
 
 .checkbox {
