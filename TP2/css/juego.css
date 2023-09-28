@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+.texto-body {
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: #EFEFFF;
+    text-align: center;
+}
+
+.texto-chico {
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #EFEFFF;
+    text-align: center;
+}
+
+.contenedor {
+    height: 100vh;
+    background-color: #00001D;
+    width: 100%;
+}
+
+.header {
+    background-color: #00004F;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.seccion-header1 {
+    height: 100%;
+    display: flex;
+    width: 33.3%;
+    justify-content: start;
+}
+
+.seccion-header2 {
+    height: 100%;
+    display: flex;
+    width: 33.3%;
+    justify-content: center;
+}
+
+.seccion-header3 {
+    height: 100%;
+    display: flex;
+    width: 33.3%;
+    justify-content: end;
+}
+
+.menu {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3%;
+    margin-right: 10%;
+}
+
+.menu span {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    height: 100%;
+    min-width: 60px;
+    border-radius: 100%;
+}
+
+.logo img {
+    height: 10vh;
+    border-radius: 100%;
+}
+
+.buscador {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.buscador input {
+    display: flex;
+    justify-content: end;
+    width: 300px;
+    height: 35px;
+    border-radius: 20px;
+    border: none;
+    position: relative;
+}
+
+.buscador input::placeholder {
+    padding-left: 5%;
+    color: #00001D;
+}
+
+.buscador img {
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    margin-left: 83%;
+}
+
+.mis-favoritos {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mis-favoritos button {
+    width: 150px;
+    color: #EFEFFF;
+}
+
+.mis-favoritos img {
+    padding-right: 5%;
+}
+
+.btn-trasparente {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.mi-carrito {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+}
+
+.icono {
+    width: 30px;
+    height: 30px;
+}
+
+.mi-perfil {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 3%;
+}
+
+/* arranca el footer */
+
+.footer {
+    margin-top: 65vh;
+    height: 25vh;
+    width: 100%;
+    background-color: #00004F;
+    display: flex;
+}
+
+.section-footer {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.section-redes {
+    justify-content: start;
+}
+
+.redes-sociales {
+    display: flex;
+    margin-top: 17px;
+}
+
+.redes-sociales img {
+    margin: 0 5px;
+}
+
+.medio-de-pago {
+    width: 40px;
+    height: 18px;
+    background-color: #EFEFFF;
+}
+
+.medio-de-pago img {
+    width: 100%;
+}
+
+.icono-chico {
+    width: 24px;
+    height: 24px;
+}
+
+.section-footer .logo img {
+    margin-top: 17px;
+}
+
+.section-footer:first-child p {
+    margin-bottom: 14px;
+}
