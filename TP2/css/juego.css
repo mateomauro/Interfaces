@@ -13,6 +13,18 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    color: #EFEFFF;
+    text-align: center;
+}
+
+.texto-chico {
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #EFEFFF;
+    text-align: center;
 }
 
 .contenedor {
@@ -75,7 +87,7 @@
 }
 
 .logo img {
-    height: 100%;
+    height: 10vh;
     border-radius: 100%;
 }
 
@@ -166,7 +178,47 @@
     display: flex;
 }
 
-.footer div {
+.section-footer {
     width: 20%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.section-redes {
+    justify-content: start;
+}
+
+.redes-sociales {
+    display: flex;
+    margin-top: 17px;
+}
+
+.redes-sociales img {
+    margin: 0 5px;
+}
+
+.medio-de-pago {
+    width: 40px;
+    height: 18px;
+    background-color: #EFEFFF;
+}
+
+.medio-de-pago img {
+    width: 100%;
+}
+
+.icono-chico {
+    width: 24px;
+    height: 24px;
+}
+
+.section-footer .logo img {
+    margin-top: 17px;
+}
+
+.section-footer:first-child p {
+    margin-bottom: 14px;
 }
