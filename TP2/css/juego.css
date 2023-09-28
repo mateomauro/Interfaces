@@ -28,12 +28,29 @@
 }
 
 .contenedor {
-    height: 100vh;
     background-color: #00001D;
     width: 100%;
+    display: grid;
+    grid-template-columns: 10% 65% 5% 10% 10%;
+    grid-auto-rows: 100%;
+    grid-template-rows: 10vh 5vh 75vh 5vh 25vh 5vh 75vh 5vh 75vh 5vh 25vh;
+    grid-template-areas:
+        "header header header header header"
+        " . . . . ."
+        ". juego . anuncio ."
+        ". . . . ."
+        ". mas-juegos mas-juegos mas-juegos ."
+        ". . . . ."
+        ". info info info ."
+        ". . . . ."
+        ". comentarios . anuncio2 ."
+        ". . . . ."
+        "footer footer footer footer footer";
 }
 
+
 .header {
+    grid-area: header;
     background-color: #00004F;
     height: 10vh;
     width: 100%;
@@ -168,11 +185,11 @@
     margin-right: 3%;
 }
 
-/* arranca el footer */
+/* SECCION FOOTER */
 
 .footer {
-    margin-top: 65vh;
-    height: 25vh;
+    grid-area: footer;
+    height: 100%;
     width: 100%;
     background-color: #00004F;
     display: flex;
@@ -221,41 +238,4 @@
 
 .section-footer:first-child p {
     margin-bottom: 14px;
-}
-
-/* ARRANCO EL BREADCRUMB */
-
-.breadcrumb-contenedor {
-    background-color: #00001D;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.breadcrumb {
-    display: flex;
-    flex-direction: row;
-}
-
-.breadcrumb-cate {
-    color: #EFEFFF;
-    display: inline-block;
-    text-decoration: none;
-    margin: 5px;
-}
-
-.breadcrumb-link{
-    color: #EFEFFF;
-    text-decoration: none;  
-}
-
-.contenedor-comentario {
-    display: flex;
-    flex-direction: column;    
-}
-
-.titulo-comentario{
-    display: flex;
-    justify-content: center;
-    color: #EFEFFF;
 }
