@@ -279,7 +279,9 @@
     grid-area: mas-juegos;
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(to right, lightgreen, darkgreen);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 /* INFO JUEGO */
@@ -360,4 +362,64 @@
     height: 100%;
     justify-content: start;
     align-items: center;
+}
+
+/* CARD DE MAS JUEGOS */
+
+.card-mas-juegos {
+    height: 100%;
+    width: 18%;
+    background-color: #EFEFFF;
+    border: solid 2px #FF8000;
+    position: relative;
+}
+
+.card-mas-juegos:hover .card-mas-juegos-oculta {
+    display: flex;
+}
+
+.card-mas-juegos img {
+    width: 100%;
+    height: 100%;
+}
+
+.card-mas-juegos-oculta {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 0, 29, 0.6);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    display: none;
+}
+
+.card-mas-juegos-oculta button {
+    border: none;
+    height: 25px;
+    width: 150px;
+    border-radius: 20px;
+    background-color: #08CE57;
+    color: #EFEFFF;
+}
+
+.jugar-card-oculta {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nombre-del-juego {
+    display: flex;
+    justify-content: start;
+    color: #EFEFFF;
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-bottom: 2%;
+    padding-left: 2%;
 }
