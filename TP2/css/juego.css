@@ -31,12 +31,12 @@
     background-color: #00001D;
     width: 100%;
     display: grid;
-    grid-template-columns: 10% 65% 5% 10% 10%;
+    grid-template-columns: 7% 71% 5% 10% 7%;
     grid-auto-rows: 100%;
-    grid-template-rows: 10vh 5vh 75vh 5vh 25vh 5vh 75vh 5vh 75vh 5vh 25vh;
+    grid-template-rows: 10vh 6vh 75vh 6vh 25vh 6vh 75vh 6vh 75vh 6vh 25vh;
     grid-template-areas:
         "header header header header header"
-        " . . . . ."
+        " . br-es . . ."
         ". juego . anuncio ."
         ". . . . ."
         ". mas-juegos mas-juegos mas-juegos ."
@@ -244,6 +244,7 @@
 /* SECCION ESTRELLAS */
 .estrellas {
     display: flex;
+    justify-content: end;
 }
 
 .estrellas img {
@@ -318,6 +319,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .breadcrumb {
@@ -346,4 +348,16 @@
     display: flex;
     justify-content: center;
     color: #EFEFFF;
+}
+
+
+/* BREAD Y ESTRELLAS */
+
+.bread-estrellas {
+    grid-area: br-es;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: start;
+    align-items: center;
 }
