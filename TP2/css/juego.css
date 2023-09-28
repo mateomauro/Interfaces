@@ -222,3 +222,40 @@
 .section-footer:first-child p {
     margin-bottom: 14px;
 }
+
+/* ARRANCO EL BREADCRUMB */
+
+.breadcrumb-contenedor {
+    background-color: #00001D;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.breadcrumb {
+    display: flex;
+    flex-direction: row;
+}
+
+.breadcrumb-cate {
+    color: #EFEFFF;
+    display: inline-block;
+    text-decoration: none;
+    margin: 5px;
+}
+
+.breadcrumb-link{
+    color: #EFEFFF;
+    text-decoration: none;  
+}
+
+.contenedor-comentario {
+    display: flex;
+    flex-direction: column;    
+}
+
+.titulo-comentario{
+    display: flex;
+    justify-content: center;
+    color: #EFEFFF;
+}
