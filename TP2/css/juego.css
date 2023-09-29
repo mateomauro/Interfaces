@@ -33,7 +33,7 @@
     display: grid;
     grid-template-columns: 7% 71% 5% 10% 7%;
     grid-auto-rows: 100%;
-    grid-template-rows: 10vh 6vh 75vh 6vh 25vh 6vh 75vh 6vh 75vh 6vh 25vh;
+    grid-template-rows: 10vh 6vh 75vh 6vh 25vh 6vh auto 6vh 75vh 6vh 25vh;
     grid-template-areas:
         "header header header header header"
         " . br-es . . ."
@@ -258,6 +258,67 @@
     height: 100%;
     width: 100%;
     background-image: linear-gradient(to right, red, yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-video {
+    width: 22%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5%;
+    background-color: #EFEFFF;
+}
+
+.video {
+    width: 100%;
+    height: 70%;
+    border-bottom: 2px solid black;
+}
+
+.contenedor-btn-jugar {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* SECCION JUEGANDO */
+
+.contenedor-jugando {
+    width: 100%;
+    height: 100%;
+    background-color: #08CE57;
+}
+
+.cuatro-linea {
+    width: 100%;
+    height: 95%;
+}
+
+.cuatro-linea img {
+    width: 100%;
+    height: 100%;
+}
+
+.intrucciones {
+    display: flex;
+    justify-content: end;
+    background-color: #00008A;
+    width: 100%;
+    height: 5%;
+    align-items: center;
+}
+
+.iconos-del-juego {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0 15px;
 }
 
 /* SECCION ANUNCIO */
@@ -289,16 +350,159 @@
     grid-area: info;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to right, red, yellow);
+    background: rgb(0, 0, 79, 0.8);
+    display: flex;
+    flex-direction: column;
+}
+
+.info-general {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.informacion {
+    margin: 5px 0;
+    border-radius: 10px;
+    width: 100%;
+    text-align: start;
+    color: #EFEFFF;
+}
+
+.btn-compartir-contenedor {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.icono-btn {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    margin-left: 15px;
+}
+
+.btn-compartir {
+    background-color: #008F39;
+    border: none;
+    width: 150px;
+    height: 35px;
+    text-align: center;
+    position: relative;
+    padding-left: 15px;
 }
 
 /* SECCION COMENTARIOS */
 
 .comentarios {
     grid-area: comentarios;
-    background-color: aqua;
     width: 100%;
     height: 100%;
+    color: #EFEFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+hr {
+    width: 380px;
+}
+
+.comentario {
+    background-color: #FFCD99;
+    height: 100px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.comentario-enviar {
+    background-color: #EFEFFF;
+}
+
+.comentario-perfil {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    padding-left: 5%;
+}
+
+.perfil-nombre-comentario {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+.perfil-nombre-comentario p {
+    color: rgb(0, 0, 29, 0.7);
+    margin-left: 2%;
+}
+
+.comentario-input {
+    width: 100%;
+    height: 50%;
+    border-top: solid #00001D 2px;
+    display: flex;
+}
+
+.calificacion-comentario {
+    width: 15%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.comentario-input p {
+    width: 80%;
+    height: 99%;
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+    color: #00001D;
+}
+
+
+
+.comentario-input-enviar {
+    background-color: #EFEFFF;
+}
+
+.form-comentario {
+    display: flex;
+    height: 95%;
+    width: 95%;
+}
+
+.input-form {
+    background-color: transparent;
+    margin-left: 2px;
+    height: 95%;
+    width: 95%;
+    border: none;
+}
+
+.icono-enviar {
+    display: flex;
+    align-items: center;
+}
+
+.nombre-perfil {
+    color: #00001D;
+    list-style: none;
+    margin-left: 1%;
+}
+
+.input-form::placeholder {
+    color: #00001D;
+
+    padding-left: 5%;
 }
 
 /* ANUNCIO 2 */
@@ -394,7 +598,7 @@
     display: none;
 }
 
-.card-mas-juegos-oculta button {
+.btn-jugar {
     border: none;
     height: 25px;
     width: 150px;
