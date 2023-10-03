@@ -1,0 +1,83 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.contenedor {
+    background-color: aqua;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10vh auto 25vh;
+    grid-template-areas:
+        "header"
+        "medio"
+        "footer";
+}
+
+/* ARRANCO LA CARD JUEGO */
+
+.carruseles-y-cards {
+    grid-area: medio;
+    background-color: #00001D;
+}
+
+.contenedor-card {
+    display: flex;
+    width: auto;
+    margin-top: 100px;
+    align-items: center;
+}
+
+.card {
+    border-radius: 10px;
+    width: 170px;
+    height: 190px;
+    margin-left: 100px;
+    background-color: #EFEFFF;
+    box-shadow: -1px 1px 2px #B0B0FF;
+}
+
+
+.bomberman {
+    border-radius: 10px 10px 0 0;
+    width: 170px;
+    height: 130px;
+}
+
+.btn-card-jugar {
+    border: none;
+    width: 120px;
+    height: 30px;
+    border-radius: 10px;
+    padding: 2px 8px;
+    background-color: #08CE57;
+}
+
+.card-jugar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.contender-etiqueta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.etiqueta-precio {
+    padding: 1px;
+    left: 135px;
+    right: auto;
+    position: absolute;
+    background-color: #EFEFFF;
+    transform: rotate(18deg);
+    border: solid 2px orange;
+    color: #00001D;
+    box-shadow: 1px 2px 2px;
+}

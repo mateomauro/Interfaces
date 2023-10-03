@@ -7,26 +7,6 @@
     font-weight: 400;
 }
 
-.texto-body {
-    font-family: Inter;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    color: #EFEFFF;
-    text-align: center;
-}
-
-.texto-chico {
-    font-family: Inter;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    color: #EFEFFF;
-    text-align: center;
-}
-
 .contenedor {
     background-color: #00001D;
     width: 100%;
@@ -49,7 +29,7 @@
 }
 
 
-.header {
+/* .header {
     grid-area: header;
     background-color: #00004F;
     height: 10vh;
@@ -192,9 +172,9 @@
     align-items: center;
     margin-left: 10%;
     margin-right: 3%;
-}
+} */
 
-/* SECCION FOOTER */
+/* SECCION FOOTER
 
 .footer {
     grid-area: footer;
@@ -247,7 +227,7 @@
 
 .section-footer:first-child p {
     margin-bottom: 14px;
-}
+} */
 
 
 /* SECCION ESTRELLAS */
@@ -270,6 +250,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .contenedor-video {
@@ -298,6 +279,7 @@
 /* SECCION JUEGANDO */
 
 .contenedor-jugando {
+    position: absolute;
     width: 100%;
     height: 100%;
     background-color: #08CE57;
@@ -330,6 +312,101 @@
     align-items: center;
     height: 100%;
     margin: 0 15px;
+}
+
+/* POP PAP DEL JUEGO INSTRUCCIONES */
+
+.pop-pap-instrucciones {
+    position: absolute;
+    right: 5px;
+    bottom: 9%;
+    width: 40%;
+    height: 70%;
+    background-color: #00008A;
+}
+
+.pop-pap-controles {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    color: #EFEFFF;
+}
+
+.pop-pap-info {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #EFEFFF;
+}
+
+
+.pop-pap-flecha {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pop-pap-flecha img {
+    height: 80%;
+}
+
+.pop-pap-img {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pop-pap-img img {
+    height: 90%;
+}
+
+.contenedor-cruz {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.ayuda-mostrar-instrucciones {
+    height: 20px;
+    padding: 2px;
+    border-radius: 5px;
+    background-color: #616161;
+    position: absolute;
+    bottom: 9%;
+    right: 0;
+    color: #EFEFFF;
+    display: none;
+}
+
+.ayuda-pantalla-completa {
+    height: 20px;
+    padding: 2px;
+    border-radius: 5px;
+    background-color: #616161;
+    position: absolute;
+    bottom: 9%;
+    right: 0;
+    color: #EFEFFF;
+    display: none;
+}
+
+.ayuda-agregar-favoritos {
+    height: 20px;
+    padding: 2px;
+    border-radius: 5px;
+    background-color: #616161;
+    position: absolute;
+    bottom: 9%;
+    right: 6.5%;
+    color: #EFEFFF;
+    display: none;
 }
 
 /* SECCION ANUNCIO */
@@ -485,7 +562,7 @@ hr {
     height: 99%;
     display: flex;
     align-items: center;
-    color: #00001D;
+    color: #00001D !important;
     padding-left: 5%;
 }
 
@@ -665,13 +742,14 @@ hr {
 }
 
 /* MENU DESPLEGADO */
-
+/* 
 .menu-desplegado {
     width: 15%;
     height: 90vh;
     background-color: #00004F;
     display: flex;
     flex-direction: column;
+    visibility: hidden;
 }
 
 .menu-desplegado-categorias-principales {
@@ -737,4 +815,68 @@ hr {
 .icono-mas-chico {
     width: 20px;
     height: 20px;
+} */
+
+
+/* PERFIL DESPLEGADO */
+
+/* .mi-perfil-desplegado {
+    width: 30%;
+    height: 40vh;
+    background-color: #00004F;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
 }
+
+.perfil-soy-yo {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    color: #EFEFFF;
+}
+
+.perfil-soy-yo p {
+    margin-left: 3px;
+}
+
+.contenedor-icono-perfil-desplegado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+}
+
+.configuraciones-perfil-desplegado {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    color: #EFEFFF;
+}
+
+.contenedor-cerrar-sesion {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-cerrar-sesion button {
+    background-color: transparent;
+    border: solid 2px #EFEFFF;
+    border-radius: 15px;
+    cursor: pointer;
+    color: #EFEFFF;
+    height: 30px;
+    width: 150px;
+}
+
+.contenedor-configuraciones-perfil-desplegado {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+} */
