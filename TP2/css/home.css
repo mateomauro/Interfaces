@@ -4,80 +4,397 @@
 }
 
 .contenedor {
-    background-color: aqua;
+    background-color: #00001D;
     width: 100%;
-    height: 100vh;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 10vh auto 25vh;
+    grid-template-rows: 10vh auto auto 30vh;
     grid-template-areas:
         "header"
+        "recomendados"
         "medio"
         "footer";
 }
 
-/* ARRANCO LA CARD JUEGO */
+/* recomendados */
 
-.carruseles-y-cards {
-    grid-area: medio;
-    background-color: #00001D;
+.recomendados {
+    width: 100%;
+    grid-area: recomendados;
+    z-index: 0;
 }
 
-.contenedor-card {
+.contenedor-carrusel-recomendado {
     display: flex;
-    width: auto;
-    margin-top: 100px;
+    flex-direction: column;
+    width: 100%;
     align-items: center;
 }
 
+.nombre-categoria-recomendado {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #EFEFFF;
+}
+
+.nombre-categoria-recomendado h2 {
+    font-size: 18px;
+    text-align: center;
+}
+
+.contenedor-cards-recomendado {
+    width: 190px;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    align-items: center;
+}
+
+.contenedor-cards-recomendado::-webkit-scrollbar {
+    overflow-x: hidden;
+}
+
+.card-recomendado {
+    flex: 0 0 auto;
+    height: 200px;
+    width: 170px;
+    margin: 0 10px;
+    background-color: bisque;
+    border: solid 2px wheat;
+}
+
+.indicadores {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.indicador {
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* ARRANCO LA CARD JUEGO */
+
+.carruseles {
+    width: 100%;
+    grid-area: medio;
+    background-color: #00001D;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.contenedor-carrusel {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 125px;
+    margin: 10px 0;
+}
+
+.contenedor-cards {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    align-items: center;
+}
+
+.contenedor-cards::-webkit-scrollbar {
+    display: none;
+}
+
+.nombre-categoria {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: end;
+}
+
+.nombre-categoria h2 {
+    padding-left: 10px;
+    font-size: 20px;
+    color: #EFEFFF;
+}
+
 .card {
-    border-radius: 10px;
-    width: 170px;
+    flex: 0 0 auto;
+    height: 100px;
+    width: 90px;
+    margin: 0 10px;
+    background-color: bisque;
+    border: solid 2px wheat;
+}
+
+.card-parte-imagen {
+    width: 100%;
+    height: 65%;
+}
+
+.card-parte-imagen img {
+    width: 100%;
+    height: 100%;
+}
+
+.card-parte-boton {
+    width: 100%;
+    height: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flecha {
+    display: none;
+}
+
+/* ARRANCA LAS CARD GRATIS*/
+
+.parte-img {
+    height: 65%;
+}
+
+.img-card-nueva {
+    width: 100%;
+    height: 100%;
+}
+
+.card_box {
+    flex: 0 0 auto;
+    margin: 0 15px;
+    width: 165px;
     height: 190px;
-    margin-left: 100px;
-    background-color: #EFEFFF;
-    box-shadow: -1px 1px 2px #B0B0FF;
+    border-radius: 20px;
+    background: linear-gradient(170deg, rgba(58, 56, 56, 0.623) 0%, rgb(31, 31, 31) 100%);
+    position: relative;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.55);
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.card_box:hover {
+    transform: scale(0.9);
+}
+
+.card_box span {
+    position: absolute;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    top: -10px;
+    left: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card_box span::before {
+    content: 'Gratis';
+    position: absolute;
+    width: 150%;
+    height: 40px;
+    background-image: linear-gradient(20deg, #008F39 5%, #008F39 51%, #008F39 100%);
+    transform: rotate(-45deg) translateY(-20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.23);
+    font-size: 20px;
+}
+
+.card_box span::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    bottom: 0;
+    left: 0;
+    height: 10px;
+    z-index: -1;
+    box-shadow: 140px -140px #cc3f47;
+    background-image: linear-gradient(45deg, #FF512F 0%, #F09819 51%, #FF512F 100%);
 }
 
 
-.bomberman {
-    border-radius: 10px 10px 0 0;
-    width: 170px;
-    height: 130px;
-}
+/*BOTON ANIMADO DE CARD GRATIS Y COMPRADO  */
 
-.btn-card-jugar {
+.btn-card {
+    position: relative;
+    background-color: rgb(230, 34, 77);
+    color: #fff;
     border: none;
-    width: 120px;
+    font-size: 20px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.card-parte-boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35%;
+    width: 100%;
+}
+
+.card-parte-boton .btn-card {
+    border: none;
+    width: 160px;
     height: 30px;
     border-radius: 10px;
     padding: 2px 8px;
     background-color: #08CE57;
 }
 
-.card-jugar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-}
-
-.contender-etiqueta {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    position: relative;
-}
-
-.etiqueta-precio {
-    padding: 1px;
-    left: 135px;
-    right: auto;
+.btn-card::before {
+    content: "";
+    background-color: rgb(248, 50, 93);
+    width: 0;
+    height: 100%;
     position: absolute;
-    background-color: #EFEFFF;
-    transform: rotate(18deg);
-    border: solid 2px orange;
-    color: #00001D;
-    box-shadow: 1px 2px 2px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 500ms ease-in-out;
+    display: inline-block;
+}
+
+.btn-card:hover::before {
+    width: 100%;
+}
+
+
+/* PARA ESCRITORIO */
+
+@media (min-width: 1024px) {
+
+
+    /* carrusel chico */
+    .carruseles {
+        width: 100%;
+        grid-area: medio;
+        background-color: #00001D;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        z-index: 0;
+        position: relative;
+    }
+
+    .contenedor-carrusel {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 255px;
+        margin: 10px 0;
+    }
+
+    .contenedor-cards {
+        width: 80%;
+        height: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        align-items: center;
+    }
+
+    .contenedor-cards::-webkit-scrollbar {
+        display: none;
+    }
+
+    .nombre-categoria {
+        width: 80%;
+        height: 30px;
+        display: flex;
+        align-items: end;
+    }
+
+    .nombre-categoria h2 {
+        padding-left: 10px;
+        font-size: 20px;
+        color: #EFEFFF;
+    }
+
+    .card {
+        flex: 0 0 auto;
+        height: 190px;
+        width: 160px;
+        margin: 0 10px;
+        background-color: bisque;
+        border: solid 2px wheat;
+    }
+
+    .card-parte-imagen {
+        width: 100%;
+        height: 65%;
+    }
+
+    .card-parte-imagen img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .card-parte-boton {
+        width: 100%;
+        height: 35%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .flecha {
+        display: flex;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .flecha-izquierda {
+        position: absolute;
+        left: 70px;
+        top: 95px;
+    }
+
+    .flecha-derecha {
+        position: absolute;
+        right: 70px;
+        top: 95px;
+    }
+
+    /* recomendados para escritorio */
+
+    .recomendados {
+        display: flex;
+        justify-content: center;
+    }
+
+    .contenedor-cards-recomendado {
+        width: 50%;
+        justify-content: space-evenly;
+        overflow: hidden;
+    }
+
+    .indicadores {
+        display: none;
+    }
 }

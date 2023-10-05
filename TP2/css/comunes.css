@@ -7,9 +7,11 @@
     font-weight: 400;
 }
 
+/* textos para celular */
+
 .texto-body {
     font-family: Inter;
-    font-size: 15px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -18,7 +20,7 @@
 
 .texto-chico {
     font-family: Inter;
-    font-size: 15px;
+    font-size: 11px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -34,161 +36,221 @@
     letter-spacing: 0.84px;
 }
 
+/* HEADER PARA CELULAR */
+
 .header {
     grid-area: header;
-    background-color: #00004F;
     height: 10vh;
     width: 100%;
+    background-color: #00004F;
     position: fixed;
     z-index: 2;
 }
 
 .nav {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    height: 100%;
     width: 100%;
-    height: 100%;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 100%;
+    grid-template-areas: "menu logo buscador carrito perfil";
 }
 
-.seccion-header1 {
-    height: 100%;
-    display: flex;
+.contenedor-menu-logo {
     width: 33.3%;
-    justify-content: start;
+    height: 100%;
+    background-color: black;
+    display: flex;
 }
 
-.seccion-header2 {
-    height: 100%;
-    display: flex;
+.contenedor-buscador {
     width: 33.3%;
-    justify-content: center;
+    height: 100%;
+    background-color: blue;
+    display: flex;
 }
 
-.seccion-header3 {
-    height: 100%;
-    display: flex;
+.contenedor-fav-carrito-perfil {
     width: 33.3%;
-    justify-content: end;
+    height: 100%;
+    background-color: yellow;
+    display: flex;
 }
 
 .menu {
+    grid-area: menu;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 3%;
-    margin-right: 10%;
 }
 
-.menu span {
-    height: 40px;
-    width: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.logo {
+.logo-header {
+    grid-area: logo;
     height: 100%;
-    min-width: 60px;
-    border-radius: 100%;
 }
 
-.logo img {
-    height: 10vh;
+.logo-img {
+    height: 35px;
+    width: 35px;
     border-radius: 100%;
 }
 
 .buscador {
+    grid-area: buscador;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
 }
 
-.buscador input {
-    display: flex;
-    justify-content: end;
-    width: 300px;
-    height: 35px;
-    border-radius: 20px;
-    border: none;
-    position: relative;
+.buscador-escritorio {
+    display: none;
 }
 
-.buscador input::placeholder {
-    padding-left: 5%;
-    color: #00001D;
-}
-
-.buscador img {
-    height: 24px;
-    width: 24px;
-    position: absolute;
-    margin-left: 83%;
-}
-
-.mis-favoritos {
+.carrito {
+    grid-area: carrito;
     height: 100%;
+}
+
+.perfil {
+    grid-area: perfil;
+    height: 100%;
+}
+
+
+.contenedor-iconos-nav {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.mis-favoritos button {
-    width: 150px;
-    color: #EFEFFF;
+.favoritos {
+    height: 100%;
+    display: none;
 }
 
-.mis-favoritos img {
-    padding-right: 5%;
+.icono {
+    width: 20px;
+    height: 20px;
 }
 
 .btn-trasparente {
     background-color: transparent;
     border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
     cursor: pointer;
 }
 
 
-.mi-carrito {
+/* FOOTER PARA CELULAR */
+
+.footer {
+    grid-area: footer;
+    width: 100%;
     height: 100%;
+    background-color: #00004F;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 80% 20%;
+    grid-template-areas: "categoria ayuda pagos"
+        "logo-copi logo-copi logo-copi";
+}
+
+.logo-footer {
+    display: none;
+}
+
+.section-footer-redes {
+    display: none;
+}
+
+.section-footer-logo-copi {
+    grid-area: logo-copi;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 10%;
-}
-
-.icono {
-    width: 30px;
-    height: 30px;
-}
-
-.mi-perfil {
+    text-align: center;
     height: 100%;
+}
+
+.section-footer-categoria {
+    grid-area: categoria;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    height: 100%;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.section-footer-categoria p {
+    height: 20px;
     display: flex;
     justify-content: center;
+    text-align: center;
     align-items: center;
-    margin-left: 10%;
-    margin-right: 3%;
 }
 
 
-/* MENU DESPLEGADO */
+.section-footer-ayuda {
+    grid-area: ayuda;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.section-footer-ayuda p {
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    white-space: nowrap;
+}
+
+
+
+.section-footer-pagos {
+    grid-area: pagos;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+}
+
+.section-footer-pagos p {
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.medio-de-pago {
+    width: 50px;
+    height: 20px;
+    background-color: #EFEFFF;
+}
+
+.medio-de-pago img {
+    width: 100%;
+    height: 100%;
+}
+
+/* MENU DESPLEGADO PARA ESCRITORIO */
 
 .menu-desplegado {
     width: 15%;
-    height: 90vh;
+    height: 100vh;
     background-color: #00004F;
     display: flex;
     flex-direction: column;
-    display: none;
+    position: absolute;
+    top: 0;
+    z-index: 1;
 }
 
 .menu-desplegado-categorias-principales {
@@ -196,7 +258,6 @@
     height: 90%;
     overflow-y: scroll;
     overflow-x: hidden;
-    z-index: 0;
 }
 
 .menu-desplegado-categorias-principales::-webkit-scrollbar {
@@ -211,7 +272,6 @@
 .menu-desplegado-redes-sociales {
     height: 10%;
     width: 100%;
-    z-index: 1;
 }
 
 .menu-desplegado-redes-sociales .redes-sociales {
@@ -256,8 +316,11 @@
     height: 20px;
 }
 
+.menu-desplegado-redes-sociales p {
+    text-align: center;
+}
 
-/* PERFIL DESPLEGADO */
+/* PERFIL DESPLEGADO PARA ESCRITORIO*/
 
 .mi-perfil-desplegado {
     width: 30%;
@@ -266,7 +329,6 @@
     position: absolute;
     right: 0;
     top: 0;
-    display: none;
 }
 
 .perfil-soy-yo {
@@ -320,7 +382,7 @@
     justify-content: space-evenly;
 }
 
-/* CARRITO */
+/* CARRITO PARA ESCRITORIO */
 
 .seccion-carrito {
     display: flex;
@@ -330,7 +392,7 @@
     width: 100%;
     position: absolute;
     top: 0;
-    display: none;
+    z-index: 2;
 }
 
 .contenedor-carrito {
@@ -436,60 +498,234 @@ h3 {
     position: absolute;
     right: 5px;
     top: 5px;
+    cursor: pointer;
 }
 
-
-/* SECCION FOOTER */
-
-.footer {
-    grid-area: footer;
-    height: 100%;
-    width: 100%;
-    background-color: #00004F;
-    display: flex;
-}
-
-.section-footer {
-    width: 20%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.section-redes {
-    justify-content: start;
-}
-
-.redes-sociales {
-    display: flex;
-    margin-top: 17px;
-}
-
-.redes-sociales img {
-    margin: 0 5px;
-}
-
-.medio-de-pago {
-    width: 40px;
-    height: 18px;
-    background-color: #EFEFFF;
-}
-
-.medio-de-pago img {
-    width: 100%;
-}
 
 .icono-chico {
     width: 24px;
     height: 24px;
 }
 
-.section-footer .logo img {
-    margin-top: 17px;
+/* PARA DESKTOP */
+
+@media (min-width: 1024px) {
+
+    /* HEADER PARA ESCRITORIO */
+    .nav {
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 5% 5% 10% 10% 5% 30% 15% 10% 5% 5%;
+        grid-template-rows: 100%;
+        grid-template-areas: "menu . logo . . buscador-escritorio .  favoritos  carrito  perfil";
+    }
+
+    .contenedor-menu-logo {
+        height: 100%;
+        background-color: black;
+        display: flex;
+    }
+
+    .contenedor-buscador {
+        width: 33.3%;
+        height: 100%;
+        background-color: blue;
+        display: flex;
+    }
+
+    .contenedor-fav-carrito-perfil {
+        width: 33.3%;
+        height: 100%;
+        background-color: yellow;
+        display: flex;
+    }
+
+
+    .logo-img {
+        height: 45px;
+        width: 45px;
+        border-radius: 100%;
+    }
+
+    .buscador {
+        grid-area: buscador;
+        height: 100%;
+        display: none;
+    }
+
+    .buscador-escritorio {
+        grid-area: buscador-escritorio;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .buscador-escritorio input {
+        display: flex;
+        justify-content: end;
+        width: 100%;
+        height: 35px;
+        border-radius: 20px;
+        border: none;
+        position: relative;
+    }
+
+    .buscador-escritorio input::placeholder {
+        padding-left: 5%;
+        color: #00001D;
+    }
+
+    .buscador-escritorio img {
+        height: 24px;
+        width: 24px;
+        position: absolute;
+        margin-left: 84%;
+    }
+
+    .favoritos {
+        height: 100%;
+        grid-area: favoritos;
+        display: flex;
+    }
+
+    .favoritos p {
+        white-space: nowrap;
+        margin: 0px 5px;
+        color: #EFEFFF;
+    }
+
+    .favoritos button {
+        display: flex;
+        height: 100%;
+        align-items: center;
+    }
+
+    .icono {
+        width: 25px;
+        height: 25px;
+    }
+
+    /* FOOTER PARA ESCRITORIO */
+
+    .footer {
+        grid-area: footer;
+        width: 100%;
+        height: 100%;
+        background-color: #00004F;
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        grid-template-rows: 15% 70% 15%;
+        grid-template-areas:
+            ". . . . ."
+            "logo-copi categoria ayuda pagos redes"
+            ". . . . .";
+    }
+
+    .logo-footer {
+        display: flex;
+        padding-bottom: 10%;
+    }
+
+    .section-footer-redes {
+        display: flex;
+        grid-area: redes;
+        justify-content: center;
+    }
+
+    .section-footer-logo-copi {
+        grid-area: logo-copi;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+        text-align: center;
+        height: 100%;
+    }
+
+    .section-footer-logo-copi p {
+        height: 20px;
+    }
+
+    .section-footer-categoria {
+        grid-area: categoria;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 12px;
+        height: 100%;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .section-footer-categoria p {
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+
+    .section-footer-ayuda {
+        grid-area: ayuda;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .section-footer-ayuda p {
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        white-space: nowrap;
+    }
+
+
+
+    .section-footer-pagos {
+        grid-area: pagos;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+    }
+
+    .section-footer-pagos p {
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        white-space: nowrap;
+    }
+
+    .medio-de-pago {
+        width: 50px;
+        height: 20px;
+        background-color: #EFEFFF;
+    }
+
+    .medio-de-pago img {
+        width: 100%;
+        height: 100%;
+    }
 }
 
-.section-footer:first-child p {
-    margin-bottom: 14px;
+
+/* PARA OCULTAR COSAS */
+
+.ocultar {
+    display: none;
 }
