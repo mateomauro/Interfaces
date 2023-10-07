@@ -30,11 +30,40 @@ label {
     color: #EFEFFF
 }
 
+
+.contenedor {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: 10vh auto 25vh;
+    grid-template-areas:
+        "header"
+        "registro"
+        "footer";
+}
+
+.login-grid {
+    grid-template-areas:
+        "header"
+        "login"
+        "footer";
+}
+
+.contenedor-registro {
+    grid-area: registro;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
 .section-registro {
     width: 400px;
     height: auto;
     background-color: #00004F;
     border: 2px solid #EFEFFF;
+    margin: 20px 0;
 }
 
 .seccion-login {
@@ -75,9 +104,19 @@ hr {
 }
 
 .input-regitro {
+    width: 100%;
     display: flex;
     flex-direction: column;
     margin: 5px 0px;
+}
+
+.contenedor-fecha {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedor-fecha select {
+    width: 30%;
 }
 
 .secciones {
@@ -94,18 +133,44 @@ hr {
     align-items: center;
 }
 
-input {
-    border-radius: 10px;
+.seccion-formulario input {
+    border-radius: 5px;
     height: 20px;
     width: 250px;
     background-color: transparent;
     border: solid 2px #EFEFFF;
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+
+/* YA LO PASE */
+select {
+    border-radius: 10px;
+    border: solid 2px #EFEFFF;
+}
+
+.dia-nacimiento::-webkit-scrollbar {
+    width: 7px;
+}
+
+.dia-nacimiento::-webkit-scrollbar-thumb {
+    background-color: #00004F;
+    border-radius: 10px;
+
 }
 
 input::placeholder {
     padding-left: 5%;
     color: #EFEFFF;
     opacity: 50%;
+}
+
+.contenedor-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 65vh;
+    grid-area: login;
 }
 
 .form-login {
@@ -126,12 +191,6 @@ input::placeholder {
 
 }
 
-.checkbox {
-    width: 15px;
-    height: 15px;
-    margin-right: 5px;
-}
-
 
 button {
     height: 30px;
@@ -150,6 +209,11 @@ button {
     margin: 5px 0;
     border-radius: 20px;
     padding: 3px;
+    cursor: pointer;
+}
+
+.btn-padre:hover {
+    opacity: 0.9;
 }
 
 .btn-google {
@@ -169,8 +233,9 @@ button {
 
 .capchat {
     width: 90%;
-    height: 65px;
-    background-color: #EFEFFF;
+    height: 35px;
+    border-radius: 5px;
+    background-color: #B0B0FF;
     margin-top: 5px;
     display: flex;
     align-items: center;
@@ -200,4 +265,20 @@ button {
 
 h4 span {
     color: #B0B0FF;
+    cursor: pointer;
+}
+
+span:hover {
+    color: #7676FF;
+}
+
+.ocultar {
+    display: none;
+}
+
+.checkbox {
+    background-color: #B0B0FF;
+    width: 15px !important;
+    height: 15px !important;
+    margin-right: 5px !important;
 }

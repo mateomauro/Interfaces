@@ -16,12 +16,34 @@
         "footer";
 }
 
+/* opacidad de las cards general para todas */
+
+.opacidad-cards {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 29, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    display: none;
+}
+
+.titulo-del-juego-card-box {
+    color: #EFEFFF;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
 /* recomendados */
 
 .recomendados {
     width: 100%;
     grid-area: recomendados;
     z-index: 0;
+    position: relative;
 }
 
 .contenedor-carrusel-recomendado {
@@ -47,7 +69,7 @@
 
 .contenedor-cards-recomendado {
     width: 190px;
-    height: 100%;
+    height: 230px;
     display: flex;
     flex-wrap: nowrap;
     overflow-x: scroll;
@@ -59,20 +81,12 @@
     overflow-x: hidden;
 }
 
-.card-recomendado {
-    flex: 0 0 auto;
-    height: 200px;
-    width: 170px;
-    margin: 0 10px;
-    background-color: bisque;
-    border: solid 2px wheat;
-}
-
 .indicadores {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 10px;
+    position: absolute;
+    bottom: 9px;
 }
 
 .indicador {
@@ -84,7 +98,107 @@
     display: inline-block;
 }
 
-/* ARRANCO LA CARD JUEGO */
+.card_box-recomendada {
+    margin: 0 10px;
+    flex: 0 0 auto;
+    width: 175px;
+    height: 190px;
+    border-radius: 15px;
+    background: #EFEFFF;
+    position: relative;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.55);
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.card_box-recomendada:hover {
+    transform: scale(0.9);
+}
+
+.card_box-recomendada:hover .opacidad-cards {
+    display: flex;
+}
+
+.card_box-recomendada span {
+    position: absolute;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    top: -10px;
+    left: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card_box-recomendada span::before {
+    content: 'Gratis';
+    position: absolute;
+    top: 42px;
+    width: 145%;
+    height: 40px;
+    background-image: linear-gradient(20deg, #008F39 5%, #008F39 51%, #008F39 100%);
+    transform: rotate(-45deg) translateY(-20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.23);
+    font-size: 22px;
+}
+
+.card_box-recomendada span::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    bottom: 13px;
+    left: 0;
+    height: 10px;
+    z-index: -1;
+    box-shadow: 127px -127px #cc3f47;
+    background-image: linear-gradient(45deg, #FF512F 0%, #F09819 51%, #FF512F 100%);
+}
+
+.btn-card-recomendada {
+    position: relative;
+    background-color: rgb(230, 34, 77);
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.card-parte-boton .btn-card-recomendada {
+    border: none;
+    width: 160px;
+    height: 30px;
+    border-radius: 10px;
+    padding: 2px 8px;
+    background-color: #08CE57;
+}
+
+.btn-card-recomendada::before {
+    content: "";
+    background-color: rgb(248, 50, 93);
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 500ms ease-in-out;
+    display: inline-block;
+}
+
+.btn-card-recomendada:hover::before {
+    width: 100%;
+}
+
+/* ARRANCO LOS CARRUSELES DE JUEGO */
 
 .carruseles {
     width: 100%;
@@ -101,7 +215,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    height: 125px;
+    height: 155px;
     margin: 10px 0;
 }
 
@@ -167,6 +281,10 @@
 
 .parte-img {
     height: 65%;
+    overflow: hidden;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    position: relative;
 }
 
 .img-card-nueva {
@@ -177,14 +295,19 @@
 .card_box {
     flex: 0 0 auto;
     margin: 0 15px;
-    width: 165px;
-    height: 190px;
-    border-radius: 20px;
-    background: linear-gradient(170deg, rgba(58, 56, 56, 0.623) 0%, rgb(31, 31, 31) 100%);
+    width: 105px;
+    height: 120px;
+    border-radius: 10px;
+    background: #EFEFFF;
     position: relative;
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.55);
     cursor: pointer;
     transition: all .3s;
+}
+
+
+.card_box:hover .opacidad-cards {
+    display: flex;
 }
 
 .card_box:hover {
@@ -194,10 +317,10 @@
 .card_box span {
     position: absolute;
     overflow: hidden;
-    width: 150px;
-    height: 150px;
-    top: -10px;
-    left: -10px;
+    width: 95px;
+    height: 87px;
+    top: -5px;
+    left: -6px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -206,30 +329,31 @@
 .card_box span::before {
     content: 'Gratis';
     position: absolute;
+    top: 41px;
     width: 150%;
-    height: 40px;
+    height: 18px;
     background-image: linear-gradient(20deg, #008F39 5%, #008F39 51%, #008F39 100%);
     transform: rotate(-45deg) translateY(-20px);
     display: flex;
     align-items: center;
     justify-content: center;
     color: #fff;
-    font-weight: 600;
+    font-weight: 400;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.23);
-    font-size: 20px;
+    font-size: 12px;
 }
 
 .card_box span::after {
     content: '';
     position: absolute;
-    width: 10px;
-    bottom: 0;
-    left: 0;
+    width: 5px;
+    bottom: 5px;
+    left: 1px;
     height: 10px;
     z-index: -1;
-    box-shadow: 140px -140px #cc3f47;
+    box-shadow: 76px -75px #cc3f47;
     background-image: linear-gradient(45deg, #FF512F 0%, #F09819 51%, #FF512F 100%);
 }
 
@@ -256,11 +380,15 @@
 
 .card-parte-boton .btn-card {
     border: none;
-    width: 160px;
-    height: 30px;
+    width: 82px;
+    height: 16px;
     border-radius: 10px;
     padding: 2px 8px;
     background-color: #08CE57;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
 }
 
 .btn-card::before {
@@ -280,6 +408,177 @@
     width: 100%;
 }
 
+/* TERMINA GRATIS, SIGO CARD CON LA COMPRA */
+
+.card_box .span-comprar::before {
+    content: 'comprado';
+    top: 41px;
+    width: 150%;
+    height: 18px;
+    background-image: linear-gradient(20deg, #E5BE01 5%, #E5BE01 51%, #E5BE01 100%);
+    transform: rotate(-45deg) translateY(-20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.23);
+    font-size: 12px;
+}
+
+.card_box .span-comprar::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    bottom: 5px;
+    left: 1px;
+    height: 10px;
+    z-index: -1;
+    box-shadow: 76px -75px #cc3f47;
+    background-image: linear-gradient(45deg, #FF512F 0%, #F09819 51%, #FF512F 100%);
+}
+
+/* CARD COMPRAR */
+.card-boton-comprar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15%;
+    width: 100%;
+}
+
+/* BOTON DE AGREGAR AL CARRITO */
+.CartBtn {
+    border: none;
+    width: 82px;
+    height: 16px;
+    border-radius: 10px;
+    padding: 2px 8px;
+    background-color: #1F1FFF;
+    color: #fff;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: .5s;
+    overflow: hidden;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.103);
+    position: relative;
+}
+
+.IconContainer {
+    position: absolute;
+    left: -58px;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    z-index: 2;
+    transition-duration: .5s;
+}
+
+.IconContainer svg {
+    padding-left: 5px;
+}
+
+.icon {
+    border-radius: 1px;
+}
+
+.text {
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #EFEFFF;
+    z-index: 1;
+    transition-duration: .5s;
+    font-size: 8px;
+    font-weight: 600;
+}
+
+.CartBtn:hover .IconContainer {
+    transform: translateX(58px);
+    border-radius: 40px;
+    transition-duration: .5s;
+}
+
+.CartBtn:hover .text {
+    margin-right: 5px;
+    transform: translate(10px, 0px);
+    transition-duration: .5s;
+}
+
+.CartBtn:active {
+    transform: scale(0.95);
+    transition-duration: .5s;
+}
+
+.card-nombre-precio {
+    height: 10%;
+}
+
+.texto-resaltado {
+    text-align: center;
+    margin: 0;
+    font-size: 12px;
+    font-weight: 600;
+    color: #00001D;
+    font-style: normal;
+    letter-spacing: 1.0px;
+}
+
+/* BOTON YA AGREGADO AL CARRITO */
+
+.card-boton-agregadoCarrito {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15%;
+    width: 100%;
+}
+
+.agregado-al-carrito {
+    width: 82px;
+    height: 16px;
+    background-color: #7676FF;
+    color: #EFEFFF;
+    letter-spacing: 0.1em;
+    border: none;
+    border-radius: 10px;
+    padding: 2px 8px;
+    font-size: 8px;
+    font-weight: 600;
+    margin: 0 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tacho-basura {
+    background-color: #DE0606;
+    border: none;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 0 2px;
+    cursor: pointer;
+}
+
+.tacho-basura img {
+    width: 80%;
+    height: 80%;
+}
 
 /* PARA ESCRITORIO */
 
@@ -304,7 +603,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        height: 255px;
+        height: 285px;
         margin: 10px 0;
     }
 
@@ -316,6 +615,7 @@
         overflow-x: scroll;
         overflow-y: hidden;
         align-items: center;
+        scroll-behavior: smooth;
     }
 
     .contenedor-cards::-webkit-scrollbar {
@@ -354,13 +654,6 @@
         height: 100%;
     }
 
-    .card-parte-boton {
-        width: 100%;
-        height: 35%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
 
     .flecha {
         display: flex;
@@ -397,4 +690,325 @@
     .indicadores {
         display: none;
     }
+
+    /* TODAS LAS CARD PARA ESCRITORIO */
+    /* ARRANCA LAS CARD GRATIS*/
+
+    .parte-img {
+        height: 65%;
+        overflow: hidden;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+    }
+
+    .img-card-nueva {
+        width: 100%;
+        height: 100%;
+    }
+
+    .card_box {
+        width: 175px;
+        height: 190px;
+        border-radius: 15px;
+        background: #EFEFFF;
+        position: relative;
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.55);
+        cursor: pointer;
+        transition: all .3s;
+    }
+
+    .card_box:hover {
+        transform: scale(0.9);
+    }
+
+    .card_box span {
+        position: absolute;
+        overflow: hidden;
+        width: 150px;
+        height: 150px;
+        top: -10px;
+        left: -10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card_box span::before {
+        content: 'Gratis';
+        position: absolute;
+        left: -42px;
+        top: 49px;
+        width: 145%;
+        height: 27px;
+        background-image: linear-gradient(20deg, #008F39 5%, #008F39 51%, #008F39 100%);
+        transform: rotate(-45deg) translateY(-20px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.23);
+        font-size: 16px;
+    }
+
+    .card_box span::after {
+        content: '';
+        position: absolute;
+        width: 10px;
+        bottom: 28px;
+        left: 0;
+        height: 10px;
+        z-index: -1;
+        box-shadow: 111px -112px #cc3f47;
+        background-image: linear-gradient(45deg, #FF512F 0%, #F09819 51%, #FF512F 100%);
+    }
+
+    /* TERMINA GRATIS, SIGO CARD CON LA COMPRA */
+
+    .card_box .span-comprar::before {
+        content: 'Comprada';
+        position: absolute;
+        left: -42px;
+        top: 49px;
+        width: 145%;
+        height: 27px;
+        background-image: linear-gradient(20deg, #E5BE01 5%, #E5BE01 51%, #E5BE01 100%);
+        transform: rotate(-45deg) translateY(-20px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.23);
+        font-size: 16px;
+    }
+
+    .card_box .span-comprar::after {
+        content: '';
+        position: absolute;
+        width: 10px;
+        bottom: 28px;
+        left: 0;
+        height: 10px;
+        z-index: -1;
+        box-shadow: 111px -112px #cc3f47;
+        background-image: linear-gradient(45deg, #FF512F 0%, #F09819 51%, #FF512F 100%);
+    }
+
+    /*BOTON ANIMADO DE CARD GRATIS Y COMPRADO  */
+
+    .btn-card {
+        position: relative;
+        background-color: rgb(230, 34, 77);
+        color: #fff;
+        border: none;
+        font-size: 20px;
+        z-index: 1;
+        overflow: hidden;
+    }
+
+    .card-parte-boton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 35%;
+        width: 100%;
+    }
+
+    .card-parte-boton .btn-card {
+        border: none;
+        width: 130px;
+        height: 30px;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        color: #00001D;
+        border-radius: 10px;
+        padding: 2px 8px;
+        background-color: #08CE57;
+    }
+
+    .btn-card::before {
+        content: "";
+        background-color: rgb(248, 50, 93);
+        width: 0;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: width 500ms ease-in-out;
+        display: inline-block;
+    }
+
+    .btn-card:hover::before {
+        width: 100%;
+    }
+
+    /* CARD COMPRAR */
+    .card-boton-comprar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 15%;
+        width: 100%;
+    }
+
+    /* PARTE DEL BTN AGREGADO AL CARRITO */
+
+    .card-boton-agregadoCarrito {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 15%;
+        width: 100%;
+    }
+
+    .agregado-al-carrito {
+        width: 130px;
+        height: 30px;
+        background-color: #7676FF;
+        color: #EFEFFF;
+        letter-spacing: 0.1em;
+        border: none;
+        border-radius: 10px;
+        padding: 2px 8px;
+        font-size: 12px;
+        font-weight: 600;
+        margin: 0 2px;
+    }
+
+    .tacho-basura {
+        background-color: #1F1FFF;
+        border: none;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        border-radius: 10px;
+        margin: 0 2px;
+        cursor: pointer;
+    }
+
+    .tacho-basura:hover {
+        background-color: #DE0606;
+        transition: all 0.5s;
+        transform: scale(1.1);
+    }
+
+    .tacho-basura img {
+        width: 80%;
+        height: 80%;
+    }
+
+    /* BOTON DE COMPRAR */
+    .CartBtn {
+        width: 130px;
+        height: 30px;
+        background-color: #1F1FFF;
+        color: #EFEFFF;
+        letter-spacing: 0.1em;
+        border: none;
+        border-radius: 10px;
+        padding: 2px 8px;
+        font-size: 12px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition-duration: .5s;
+        overflow: hidden;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.103);
+        position: relative;
+    }
+
+    .IconContainer {
+        position: absolute;
+        left: -58px;
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        z-index: 2;
+        transition-duration: .5s;
+    }
+
+    .IconContainer svg {
+        height: 0.9rem;
+        padding-right: 4px;
+    }
+
+    .icon {
+        border-radius: 1px;
+    }
+
+    .text {
+        height: 100%;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #EFEFFF;
+        z-index: 1;
+        transition-duration: .5s;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .CartBtn:hover .IconContainer {
+        transform: translateX(58px);
+        border-radius: 40px;
+        transition-duration: .5s;
+    }
+
+    .CartBtn:hover .text {
+        transform: translate(10px, 0px);
+        transition-duration: .5s;
+    }
+
+    .CartBtn:active {
+        transform: scale(0.95);
+        transition-duration: .5s;
+    }
+
+    .card-nombre-precio {
+        height: 10%;
+    }
+
+    .texto-resaltado {
+        text-align: center;
+        height: 100%;
+        margin: 0;
+        font-size: 15px;
+        color: #00001D;
+        font-style: normal;
+        letter-spacing: 1.0px;
+    }
+
+    .card_box-recomendada {
+        width: 210px;
+        height: 260px;
+    }
+
+    .contenedor-cards-recomendado {
+        height: 320px;
+        width: 60%;
+    }
+}
+
+
+.card-efecto {
+    transform: scale(1.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    transition: all 0.5s ease;
 }

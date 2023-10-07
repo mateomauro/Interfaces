@@ -729,3 +729,9 @@ h3 {
 .ocultar {
     display: none;
 }
+
+.ocultar-degradado {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}

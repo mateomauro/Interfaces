@@ -52,6 +52,48 @@
     position: relative;
 }
 
+.escape {
+    position: absolute;
+    top: 2%;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.escape p {
+    height: 100%;
+    font-size: 18px;
+    width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #616161;
+    border-radius: 5px;
+}
+
+.escape span {
+    height: 80%;
+    width: auto;
+    border: solid 2px #EFEFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 5px;
+    margin: 0 3px;
+}
+
+.pantallaCompleta {
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+    grid-template-areas: "juego";
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
 .contenedor-video {
     width: 22%;
     height: 50%;
@@ -103,6 +145,10 @@
     width: 100%;
     height: 8%;
     align-items: center;
+}
+
+.intrucciones div {
+    cursor: pointer;
 }
 
 .iconos-del-juego {
@@ -268,15 +314,6 @@
     margin-left: 15px;
 }
 
-.btn-compartir {
-    background-color: #008F39;
-    border: none;
-    width: 150px;
-    height: 35px;
-    text-align: center;
-    position: relative;
-    padding-left: 15px;
-}
 
 /* SECCION COMENTARIOS */
 
@@ -296,14 +333,16 @@ hr {
 
 .comentario {
     background-color: #FFCD99;
-    height: 100px;
+    min-height: 100px;
+    max-height: 100px;
     width: 100%;
-    margin: 10px 0;
+    margin-bottom: 10px;
     border-radius: 10px;
 }
 
 .comentario-enviar {
     background-color: #EFEFFF;
+    margin-top: 10px;
 }
 
 .comentario-perfil {
@@ -363,8 +402,6 @@ hr {
     padding-left: 5%;
 }
 
-
-
 .comentario-input-enviar {
     background-color: #EFEFFF;
 }
@@ -410,6 +447,29 @@ hr {
 .titulo img {
     margin: 0 5px;
 }
+
+.comentarios-realizados {
+    width: 100%;
+    height: 278px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    overflow-y: scroll;
+}
+
+.comentarios-realizados::-webkit-scrollbar {
+    width: 5px;
+}
+
+.comentarios-realizados::-webkit-scrollbar-thumb {
+    background-color: #EFEFFF;
+    /* Color del pulgar (la barra que se desplaza) */
+    border-radius: 10px;
+    height: 40%;
+    /* Esto no cambiará la altura del pulgar */
+}
+
+
 
 /* ANUNCIO 2 */
 
@@ -504,14 +564,6 @@ hr {
     display: none;
 }
 
-.btn-jugar {
-    border: none;
-    height: 25px;
-    width: 150px;
-    border-radius: 20px;
-    background-color: #08CE57;
-    color: #EFEFFF;
-}
 
 .jugar-card-oculta {
     height: 100%;
@@ -520,6 +572,8 @@ hr {
     justify-content: center;
     align-items: center;
 }
+
+
 
 .nombre-del-juego {
     display: flex;
@@ -530,4 +584,171 @@ hr {
     justify-content: center;
     align-items: center;
     padding-bottom: 2%;
+}
+
+
+/* BTN COMPARTIR */
+
+.btn {
+    margin: 5px 0;
+    width: 150px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --btn-color: #008F39;
+    position: relative;
+    padding: 16px 32px;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1;
+    color: #EFEFFF;
+    background: none;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    cursor: pointer;
+    filter: drop-shadow(0 2px 8px rgba(39, 94, 254, 0.32));
+    transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.btn::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: var(--btn-color);
+    border-radius: 10px;
+    transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.btn span,
+.btn span span {
+    display: inline-flex;
+    vertical-align: middle;
+    transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.btn span {
+    transition-delay: 0.05s;
+}
+
+.btn span:first-child {
+    padding-right: 7px;
+}
+
+.btn span span {
+    margin-left: 8px;
+    transition-delay: 0.1s;
+}
+
+.btn ul {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    transform: translateY(-50%);
+}
+
+.btn ul li {
+    flex: 1;
+}
+
+.btn ul li a {
+    display: inline-flex;
+    vertical-align: middle;
+    transform: translateY(55px);
+    transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.btn ul li a:hover {
+    opacity: 0.5;
+}
+
+.btn:hover::before {
+    transform: scale(1.2);
+}
+
+.btn:hover span,
+.btn:hover span span {
+    transform: translateY(-55px);
+}
+
+.btn:hover ul li a {
+    transform: translateY(0);
+}
+
+.btn:hover ul li:nth-child(1) a {
+    transition-delay: 0.15s;
+}
+
+.btn:hover ul li:nth-child(2) a {
+    transition-delay: 0.2s;
+}
+
+.btn:hover ul li:nth-child(3) a {
+    transition-delay: 0.25s;
+}
+
+
+/* BOTONES JUGANDO */
+.btn-card {
+    position: relative;
+    background-color: rgb(230, 34, 77);
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    z-index: 1;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card-parte-boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35%;
+    width: 100%;
+}
+
+.btn-card {
+    border: none;
+    width: 160px;
+    height: 30px;
+    border-radius: 10px;
+    padding: 2px 8px;
+    background-color: #08CE57;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.btn-card::before {
+    content: "";
+    background-color: rgb(248, 50, 93);
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 500ms ease-in-out;
+    display: inline-block;
+}
+
+.btn-card:hover::before {
+    width: 100%;
+}
+
+.quitarFixed {
+    position: relative !important;
 }
