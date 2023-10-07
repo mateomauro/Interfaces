@@ -6,6 +6,7 @@ let contenedorLogin = document.querySelector(".contenedor-login");
 let btnLogin = document.querySelector(".login");
 let btnRegistro = document.querySelector(".inicio-sesion");
 let contenedor = document.querySelector(".contenedor");
+let btnLogueado = document.querySelector(".btn-logueado");
 
 contenedorRegistro.classList.remove("ocultar");
 
@@ -22,4 +23,7 @@ btnLogin.addEventListener("click", () => {
 
 })
 
-let btnForm = document.querySelector(".btn-logueado");
+btnLogueado.addEventListener("click", (e) => {
+    e.preventDefault();
+    contenedor.classList.add("opacidad");
+})
