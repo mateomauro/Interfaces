@@ -14,8 +14,8 @@
 }
 
 .contador {
-    font-weight: 400;
-    font-size: 25px;
+    font-weight: 300;
+    font-size: 23px;
     color: #EFEFFF;
     margin-bottom: 20px;
 }
@@ -34,9 +34,9 @@
     overflow: hidden;
     border-radius: 5rem;
     padding: 1rem 5rem;
-}
-
-.loader::after {
+  }
+  
+  .loader::after {
     content: '';
     position: absolute;
     top: 0;
@@ -46,17 +46,17 @@
     background-color: var(--clr);
     z-index: 2;
     animation: loading var(--load-time) linear;
-}
-
-@keyframes loading {
+  }
+  
+  @keyframes loading {
     0% {
-        width: 0%;
+      width: 0%;
     }
-
+  
     100% {
-        width: 100%;
+      width: 100%;
     }
-}
+  }
 
 .contenedor {
     background-color: #00001D;
