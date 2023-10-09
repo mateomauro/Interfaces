@@ -82,7 +82,7 @@ carruseles.forEach((carrusel) => {
 // LOADING
 
 let contador = 0;
-let tiempo = 5000 / 100;
+let tiempo = 1 / 100;
 let contenedorHome = document.querySelector(".contenedor");
 let contenedorLoader = document.querySelector(".contenedor-loading");
 let incrementador = document.querySelector(".contador");

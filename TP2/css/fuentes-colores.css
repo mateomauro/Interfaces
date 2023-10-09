@@ -43,27 +43,27 @@
 }
 
 h1 {
-    font-family: Inter;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+    font-family: Inter !important;
+    font-size: 30px !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    line-height: normal !important;
 }
 
 h2 {
-    font-family: Inter;
-    font-size: 34px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+    font-family: Inter !important;
+    font-size: 24px !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    line-height: normal !important;
 }
 
 h3 {
-    font-family: Inter;
-    font-size: 29px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+    font-family: Inter !important;
+    font-size: 20px !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    line-height: normal !important;
 }
 
 h4 {
@@ -93,7 +93,7 @@ h6 {
 .texto-body {
     /* texto BODY */
     font-family: Inter;
-    font-size: 20px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -122,7 +122,7 @@ h6 {
 .texto-chico {
     /* texto chico */
     font-family: Inter;
-    font-size: 20px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;

@@ -107,6 +107,15 @@
     width: 100%;
     height: 70%;
     border-bottom: 2px solid black;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+}
+
+.video video {
+    height: 100%;
 }
 
 .contenedor-btn-jugar {
@@ -159,6 +168,27 @@
     margin: 0 15px;
 }
 
+.iconos-del-juego p {
+    color: #EFEFFF;
+    padding-left: 3px;
+}
+
+.titulo-del-juego {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0 15px;
+    color: #EFEFFF;
+    position: absolute;
+    left: 0;
+}
+
+.titulo-del-juego img {
+    border-radius: 50%;
+    margin-right: 4px;
+}
+
 /* POP PAP DEL JUEGO INSTRUCCIONES */
 
 .pop-pap-instrucciones {
@@ -172,10 +202,20 @@
 
 .pop-pap-controles {
     width: 100%;
-    height: 20%;
+    height: 10%;
+    margin-top: 5%;
     display: flex;
     align-items: center;
+    justify-content: center;
     color: #EFEFFF;
+}
+
+.pop-pap-controles img {
+    margin-right: 2px;
+}
+
+.pop-pap-controles p {
+    margin-left: 2px;
 }
 
 .pop-pap-info {
@@ -298,7 +338,7 @@
     height: 100%;
 }
 
-.primera-parte{
+.primera-parte {
     width: 45%;
 }
 
@@ -312,7 +352,7 @@
     margin-left: 10%;
 }
 
-.info-a-completar a{
+.info-a-completar a {
     display: flex;
     justify-content: end;
     position: relative;
@@ -550,12 +590,16 @@ hr {
     color: #EFEFFF;
     display: inline-block;
     text-decoration: none;
-    margin: 5px;
+    margin: 0px 2px;
 }
 
 .breadcrumb-link {
     color: #EFEFFF;
     text-decoration: none;
+}
+
+.breadcrumb-link:hover {
+    color: #B1B0FE;
 }
 
 .contenedor-comentario {

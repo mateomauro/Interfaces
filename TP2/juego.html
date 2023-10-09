@@ -21,7 +21,9 @@
                     </button>
                 </div>
                 <div class="logo-headear contenedor-iconos-nav">
-                    <img src="iconos-svg/logo.jpg" class="logo-img">
+                    <a href="home.html">
+                        <img src="iconos-svg/logo.jpg" class="logo-img">
+                    </a>
                 </div>
                 <div class="buscador contenedor-iconos-nav">
                     <img src="iconos-svg/lupa-blanca.svg" class="icono">
@@ -171,12 +173,14 @@
                     </div>
                 </div>
                 <div class="contenedor-cerrar-sesion">
-                    <button>
-                        Cerrar sesión
-                    </button>
+                    <a href="registro.html">
+                        <button>
+                            Cerrar sesión
+                        </button>
+                    </a>
                 </div>
                 <div class="contenedor-cruz" id="btnCruzPerfil">
-                    <img src="iconos-svg/cruz-Grande.svg" alt="">
+                    <img src="iconos-svg/cruz-Grande.svg" class="icono-chico">
                 </div>
 
             </div>
@@ -237,7 +241,7 @@
                         </div>
                     </div>
                     <div class="contenedor-cruz" id="btnCruzCarrito">
-                        <img src="iconos-svg/cruz-Grande.svg" alt="">
+                        <img src="iconos-svg/cruz-Grande.svg" class="icono-chico">
                     </div>
                 </div>
             </div>
@@ -250,15 +254,21 @@
             <div class="breadcrumb-contenedor">
                 <div class="breadcrumb">
                     <li class="breadcrumb-cate">
-                        <a href="registro.html" class="breadcrumb-link">Home |</a>
+                        <a href="registro.html" class="breadcrumb-link">Home</a>
+                    </li>
+                    <li class="breadcrumb-cate">
+                        |
                     </li>
                     <nav class="link-relacion">
                         <ol>
                             <li class="breadcrumb-cate">
-                                <a href="" class="breadcrumb-link">Juego del nombre que eligio</a>
+                                <a href="" class="breadcrumb-link">Juegos de mesa</a>
                             </li>
                             <li class="breadcrumb-cate">
-                                <a href="" class="breadcrumb-link">Nombre del juego</a>
+                                >
+                            </li>
+                            <li class="breadcrumb-cate">
+                                <a href="" class="breadcrumb-link">4 en linea</a>
                             </li>
                         </ol>
                     </nav>
@@ -281,9 +291,21 @@
                     <p>Presiona <span>Esc</span> para salir de la pantalla completa</p>
                 </div>
                 <div class="cuatro-linea">
-                    <img src="iconos-svg/4enLineaJugando.png" alt="">
+                    <img src="iconos-svg/4enLineaJugando.png">
                 </div>
                 <div class="intrucciones">
+                    <div class="titulo-del-juego">
+                        <img src="iconos-svg/logo.jpg" class="icono-chico">
+                        <p>Juegos gamer</p>
+                    </div>
+                    <div class="iconos-del-juego">
+                        <img class="icono-chico" src="iconos-svg/likeBlanco.svg">
+                        <p>80%</p>
+                    </div>
+                    <div class="iconos-del-juego">
+                        <img class="icono-chico" src="iconos-svg/dislikeBlanco.svg">
+                        <p>20%</p>
+                    </div>
                     <div class="iconos-del-juego">
                         <img class="icono-chico" src="iconos-svg/corazon icono.svg">
                     </div>
@@ -299,7 +321,9 @@
 
             <div class="contenedor-video">
                 <div class="video">
-
+                    <video autoplay muted loop>
+                        <source src="iconos-svg/4EnlineaVideo.mp4" type="video/mp4">
+                    </video>
                 </div>
                 <div class="card-parte-boton">
                     <button class="btn-card" id="btn-card">Jugar</button>
@@ -460,11 +484,11 @@
                     <a
                         href="https://www.starplus.com/es-ar?cid=DSS-Search-Google-71700000085791494-&s_kwcid=AL!8468!3!576717262205!b!!g!!star%20plus.com&gad=1&gclid=CjwKCAjwyY6pBhA9EiwAMzmfwWTM4ZhfRoBUUBoQzmDsk6dmDzdP8ICtpE6ij97RKEPnwn3cuOMOnxoC0M8QAvD_BwE&gclsrc=aw.ds"><img
                             src="iconos-svg/publicidad (1).png" class="img-publi" alt="publicidad">
-                            <div class="contendor-texto-publi">
-                                <p class="publicidad-juego">Publicidad </p>
-                            </div>
-                        </a>
-                            
+                        <div class="contendor-texto-publi">
+                            <p class="publicidad-juego">Publicidad </p>
+                        </div>
+                    </a>
+
                 </div>
             </div>
             <div class="info-general">
@@ -685,6 +709,7 @@
     </div>
 
     <script src="js/Juego.js"></script>
+    <script src="js/ocultar.js"></script>
 </body>
 
 

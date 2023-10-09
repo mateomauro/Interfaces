@@ -445,6 +445,11 @@
     margin: 0 10px;
 }
 
+.btn-eliminar:hover {
+    color: var(--color-rojo);
+    cursor: pointer;
+}
+
 .contenedor-btn-compra {
     height: 30%;
     width: 100%;
@@ -500,11 +505,10 @@ h3 {
 
 .contenedor-cruz {
     position: absolute;
-    right: 5px;
-    top: 5px;
+    right: 10px;
+    top: 10px;
     cursor: pointer;
 }
-
 
 .icono-chico {
     width: 24px;
