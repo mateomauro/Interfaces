@@ -102,6 +102,10 @@
     display: none;
 }
 
+.buscador-escritorio input {
+    background-color: #EFEFFF !important;
+}
+
 .carrito {
     grid-area: carrito;
     height: 100%;
@@ -734,4 +738,18 @@ h3 {
     opacity: 0;
     visibility: hidden;
     transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+
+.aparecer {
+    animation: aparecer 1s ease-in-out;
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }

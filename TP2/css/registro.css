@@ -84,6 +84,12 @@ label {
     align-items: center;
 }
 
+.formulario-login {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .seccion-formulario {
     width: 65%;
     height: 100%;
@@ -133,19 +139,28 @@ hr {
     align-items: center;
 }
 
-.seccion-formulario input {
+input {
     border-radius: 5px;
-    height: 20px;
+    height: 25px;
     width: 250px;
     background-color: transparent;
     border: solid 2px #EFEFFF;
-    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+    margin-top: 2px;
+    color: #EFEFFF;
+    text-indent: 2px;
 }
+
+
+input:active {
+    box-shadow: 2px 2px 15px #EFEFFF inset;
+}
+
 
 /* YA LO PASE */
 select {
-    border-radius: 10px;
+    border-radius: 5px;
     border: solid 2px #EFEFFF;
+    margin-top: 2px;
 }
 
 .dia-nacimiento::-webkit-scrollbar {
@@ -188,7 +203,12 @@ input::placeholder {
 
 .olvido-contraseña {
     color: #B0B0FF;
+}
 
+.recuerdame {
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 
 
@@ -203,11 +223,11 @@ button {
 }
 
 .btn-padre {
-    height: 25px;
-    width: 150px;
+    height: 30px;
+    width: 200px;
     border: none;
     margin: 5px 0;
-    border-radius: 20px;
+    border-radius: 5px;
     padding: 3px;
     cursor: pointer;
 }
@@ -216,14 +236,48 @@ button {
     opacity: 0.9;
 }
 
-.btn-google {
-    background-color: #EFEFFF;
-    color: #00001D;
-}
+
 
 .btn-facebook {
-    background-color: #0000FF;
-    color: #EFEFFF;
+    width: 200px;
+    height: 30px;
+    background-color: #4267B2;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    transition: all 0.3s;
+}
+
+.btn-facebook:hover {
+    opacity: 0.85;
+    transform: translateY(-4px);
+}
+
+.btn-facebook .label {
+    width: 160px;
+    font-size: 12px;
+    line-height: 32px;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.btn-facebook svg {
+    fill: #fff;
+    width: 25px;
+    height: 25px;
+}
+
+.btn-google {
+    background-color: #EFEFFF;
+}
+
+.btn-google .label {
+    color: #00001D;
+    width: 160px;
 }
 
 .btn-logueado {
@@ -235,7 +289,7 @@ button {
     width: 90%;
     height: 35px;
     border-radius: 5px;
-    background-color: #B0B0FF;
+    background-color: #EFEFFF;
     margin-top: 5px;
     display: flex;
     align-items: center;
@@ -259,6 +313,12 @@ button {
     color: #00001D;
 }
 
+.reCapchat {
+    margin-right: 10%;
+    height: 25px;
+    width: 25px;
+}
+
 .aceptar-terminos span {
     color: #B0B0FF;
 }
@@ -280,7 +340,8 @@ span:hover {
     background-color: #B0B0FF;
     width: 15px !important;
     height: 15px !important;
-    margin-right: 5px !important;
+    margin-right: 3px !important;
+    margin-top: 0 !important;
 }
 
 .opacidad {
@@ -290,119 +351,119 @@ span:hover {
 
 /* ANIMACION DE CONFIRMACION */
 
-.check_mark {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 180px;
-    height: 180px;
-    font-size: 180px;
-    display: grid;
-    place-content: center;
-    border-radius: 50%;
-    border: solid 8px #EFEFFF;
-    z-index: -1;
+
+.btn-confirmacion:focus {
+    outline: none;
 }
 
-.check_mark::before {
-    content: "";
-    width: 100px;
-    height: 40px;
-    border-left: solid 10px #EFEFFF;
-    border-bottom: solid 10px #EFEFFF;
-    transform: rotate(-45deg) translate(5px, -5px)
+.btn-confirmacion:hover {
+    background: #7676FF;
 }
 
-.check_anime_outer {
+
+.button-wrapper {
+    width: 100%;
+    border-radius: 4px;
+    height: 50px;
+    text-align: center;
+    padding: 0 100px;
+    box-sizing: border-box;
+    -webkit-transition: .3s all ease .3s;
+    transition: .3s all ease .3s;
+    -webkit-transform: translate3d(0%, 0%, 10px);
+    transform: translate3d(0%, 0%, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-confirmacion {
+    height: 30px;
     width: 200px;
-    height: 200px;
-    margin: 30px 80px;
+    background: #7676FF;
+    border: none;
+    border-radius: 4px !important;
+    padding: 5px 0;
+    cursor: pointer;
+    -webkit-transition: .3s all ease;
+    transition: .3s all ease;
     position: relative;
 }
 
-.check_anime_mask {
+.tiempoTamaño {
+    border-radius: 50px !important;
+    height: 10px;
     width: 100px;
-    height: 200px;
-    overflow: hidden;
+}
+
+.btn-confirmacion p {
+    color: #EFEFFF;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 40px;
+    max-height: 40px;
+    -webkit-transition: .3s all ease;
+    transition: .3s all ease;
+}
+
+.btn-confirmacion .fill {
     position: absolute;
     top: 0;
-    z-index: 1;
-}
-
-.check_anime_mask_right {
-    right: 0;
-}
-
-.check_anime_mask_left {
     left: 0;
-}
-
-.check_anime_mask_right::before {
-    content: '';
-    position: absolute;
-    width: 100px;
-    height: 230px;
-    background-color: #00001D;
-    top: 0;
+    bottom: 0;
     right: 0;
-    z-index: 1;
-    transform-origin: 0px 100px;
-    animation: right-sq 1s 1s forwards linear 1;
+    width: 0%;
+    background: green;
+    border-radius: 50px;
 }
 
-.check_anime_mask_left::before {
-    content: '';
-    position: absolute;
-    z-index: 1;
-    width: 100px;
-    height: 230px;
-    background-color: #00001D;
-    transform-origin: 100px 80px;
-    animation: left-sq 1s 2s forwards linear 1;
-}
-
-.check_mask {
-    width: 120px;
-    height: 120px;
-    display: inline-block;
+.btn-confirmacion .fa {
+    font-size: 25px;
+    color: #EFEFFF;
     position: absolute;
     top: 0;
+    left: 0;
     right: 0;
     bottom: 0;
-    left: 0;
-    z-index: 1;
-    margin: auto;
-    background-image: linear-gradient(#00001D, #00001D);
-    background-repeat: no-repeat;
-    animation: check-ap 1s 3s linear forwards 1;
+    line-height: 30px;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
 }
 
-@keyframes right-sq {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(180deg);
-    }
+.button-wrapper.clicked {
+    padding: 0;
 }
 
-@keyframes left-sq {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(180deg);
-    }
+.button-wrapper.clicked .btn-confirmacion {
+    background: #EFEFFF;
 }
 
-@keyframes check-ap {
-    form {
-        background-position: 0;
-    }
+.button-wrapper.clicked .btn-confirmacion p {
+    max-height: 0;
+    overflow: hidden
+}
 
-    to {
-        background-position: 150px;
-    }
+.button-wrapper.clicked .btn-confirmacion .fill {
+    width: 100%;
+    -webkit-transition: .3s all ease .3s;
+    transition: 0.5s all linear .6s;
+}
+
+.button-wrapper.success .btn-confirmacion {
+    margin: 0;
+    padding: 15px;
+    width: 30px;
+}
+
+.button-wrapper.success .btn-confirmacion .fa {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(0.8);
+    -webkit-transition: .3s all ease .3s;
+    transition: .3s all ease .3s;
+}
+
+.registroExitoso {
+    padding-left: 5px;
 }

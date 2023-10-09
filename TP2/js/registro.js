@@ -6,7 +6,6 @@ let contenedorLogin = document.querySelector(".contenedor-login");
 let btnLogin = document.querySelector(".login");
 let btnRegistro = document.querySelector(".inicio-sesion");
 let contenedor = document.querySelector(".contenedor");
-let btnLogueado = document.querySelector(".btn-logueado");
 
 contenedorRegistro.classList.remove("ocultar");
 
@@ -23,7 +22,27 @@ btnLogin.addEventListener("click", () => {
 
 })
 
-btnLogueado.addEventListener("click", (e) => {
-    e.preventDefault();
-    contenedor.classList.add("opacidad");
-})
+
+//ANIMACIONES 
+document.addEventListener("DOMContentLoaded", function () {
+    var buttons = document.querySelectorAll(".btn-confirmacion");
+
+    buttons.forEach(function (button) {
+        var parent = button.parentElement;
+        var registroExitoso = parent.querySelector(".registroExitoso");
+
+        button.addEventListener("click", function (event) {
+            button.classList.add("tiempoTamaño");
+            event.preventDefault();
+            parent.classList.add("clicked");
+            setTimeout(function () {
+                parent.classList.add("success");
+                registroExitoso.classList.remove("ocultar");
+                registroExitoso.classList.add("aparecer");
+            }, 1100);
+            setTimeout(() => {
+                window.location.href = "http://127.0.0.1:5500/TP2/home.html";
+            }, 2200);
+        });
+    });
+});

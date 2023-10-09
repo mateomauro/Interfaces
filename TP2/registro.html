@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/comunes.css">
     <link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900"
         rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
 <body>
@@ -257,17 +258,17 @@
                     <h1>Crea tu cuenta</h1>
                     <div class="seccion-formulario">
                         <div class="input-regitro">
-                            <label for="">*Nombre</label>
+                            <label>*Nombre</label>
                             <input type="text" placeholder="mateo">
                         </div>
                         <div class="input-regitro">
-                            <label for="">*Apellido</label>
+                            <label>*Apellido</label>
                             <input type="text" placeholder="donati">
                         </div>
                         <div class="input-regitro">
-                            <label for="">*Fecha de nacimiento</label>
+                            <label>*Fecha de nacimiento</label>
                             <div class="contenedor-fecha">
-                                <select name="" id="" class="dia-nacimiento">
+                                <select name="" class="dia-nacimiento">
                                     <option value="">1</option>
                                     <option value="">2</option>
                                     <option value="">3</option>
@@ -300,7 +301,7 @@
                                     <option value="">30</option>
                                     <option value="">31</option>
                                 </select>
-                                <select name="" id="" class="dia-nacimiento">
+                                <select name="" class="dia-nacimiento">
                                     <option value="">Ene</option>
                                     <option value="">Feb</option>
                                     <option value="">Mar</option>
@@ -314,7 +315,7 @@
                                     <option value="">Nov</option>
                                     <option value="">Dic</option>
                                 </select>
-                                <select name="" id="" class="dia-nacimiento">
+                                <select name="" class="dia-nacimiento">
                                     <option value="">2000</option>
                                     <option value="">2001</option>
                                     <option value="">2002</option>
@@ -343,19 +344,19 @@
                             </div>
                         </div>
                         <div class="input-regitro">
-                            <label for="">Apodo</label>
+                            <label>Apodo</label>
                             <input type="text" placeholder="tatoLibertario201">
                         </div>
                         <div class="input-regitro">
-                            <label for="">*Email</label>
+                            <label>*Email</label>
                             <input type="email" placeholder="tomasdonati@hotmail.com">
                         </div>
                         <div class="input-regitro">
-                            <label for="">*Contraseña</label>
+                            <label>*Contraseña</label>
                             <input type="password" placeholder="5 caracteres o mas">
                         </div>
                         <div class="input-regitro">
-                            <label for="">*Repetir contraseña</label>
+                            <label>*Repetir contraseña</label>
                             <input type="password" placeholder="5 caracteres o mas">
                         </div>
                         <div class="capchat">
@@ -363,24 +364,37 @@
                                 <input type="checkbox" class="checkbox">
                                 <h5>No soy un robot</h5>
                             </div>
-                            <span>
-                                H
-                            </span>
+                            <img src="iconos-svg/Recaptcha.svg" class="reCapchat" alt="">
                         </div>
                     </div>
                     <div class="aceptar-terminos">
                         <input type="checkbox" class="checkbox">
                         <h6>Acepto <span>termino</span>, <span>condiciones</span> y <span>privacidad</span></h6>
                     </div>
-                    <button type="submit" class="btn-padre btn-logueado">Registrarse</button>
+                    <div class="button-wrapper">
+                        <button class="btn-confirmacion">
+                            <p>Registrarse</p>
+                            <div class="fill"></div>
+                            <div class="fa fa-check"></div>
+                        </button>
+                        <div class="ocultar registroExitoso">Registro exitoso</div>
+                    </div>
                     <h5>O</h5>
-                    <button class="btn-google btn-padre">
-                        <span></span>
-                        Continua con google
+                    <button class="btn-facebook btn-google">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M21.3493 11.1088C21.4504 11.6908 21.5008 12.2805 21.5 12.8713C21.5 15.5095 20.557 17.7402 18.916 19.2501H18.9181C17.483 20.5757 15.5103 21.3431 13.1713 21.3431C10.8715 21.3431 8.66593 20.4295 7.03975 18.8033C5.41358 17.1772 4.5 14.9716 4.5 12.6718C4.5 10.3721 5.41358 8.1665 7.03975 6.54032C8.66593 4.91415 10.8715 4.00057 13.1713 4.00057C15.3238 3.97536 17.4027 4.78406 18.9723 6.25727L16.4967 8.73291C15.6018 7.87985 14.4074 7.4127 13.1713 7.43222C10.9091 7.43222 8.98737 8.95836 8.30234 11.0134C7.93913 12.0903 7.93913 13.2566 8.30234 14.3335H8.3056C8.99388 16.3853 10.9124 17.9114 13.1745 17.9114C14.343 17.9114 15.3467 17.6123 16.1249 17.0833H16.1216C16.5735 16.784 16.9601 16.3961 17.258 15.9433C17.5558 15.4904 17.7589 14.9818 17.8548 14.4483H13.1713V11.1099L21.3493 11.1088Z"
+                                fill="#00001D" />
+                        </svg>
+                        <span class="label">Continua con google</span>
                     </button>
-                    <button class="btn-facebook btn-padre">
-                        <span></span>
-                        Continua con facebook
+                    <button class="btn-facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M9.698 22.3958H13.698V14.052H17.302L17.698 9.90621H13.698V7.81246C13.698 7.53619 13.8034 7.27124 13.9909 7.07589C14.1784 6.88054 14.4328 6.77079 14.698 6.77079H17.698V2.60413H14.698C13.3719 2.60413 12.1002 3.15286 11.1625 4.12961C10.2248 5.10636 9.698 6.43112 9.698 7.81246V9.90621H7.698L7.302 14.052H9.698V22.3958Z"
+                                fill="#EFEFFF" />
+                        </svg>
+                        <span class="label">Continua con facebook</span>
                     </button>
                     <h4>¿Ya tienes cuenta? <span class="inicio-sesion">Iniciar sesion</span></h4>
                 </form>
@@ -391,20 +405,36 @@
         <div class="contenedor-login ocultar">
             <section class="seccion-login">
                 <h1>Login</h1>
-                <form action="" class="form-login">
-                    <div class="campo-email">
-                        <label class="label-tomas">Email<input type="email" placeholder="tomasdonati123@gmail.com"
-                                required></label>
+                <form action="" class="formulario-login">
+                    <div class="seccion-formulario">
+
+                        <div class="input-regitro">
+                            <label class="label-tomas">Email
+                                <input type="email" placeholder="tomasdonati123@gmail.com">
+                            </label>
+                        </div>
+                        <div class="input-regitro">
+                            <label class="label-tomas">Contraseña
+                                <input type="password" placeholder="5 o mas caracteres">
+                            </label>
+                        </div>
+                        <div class="recuerdame">
+                            <input type="checkbox" class="checkbox">
+                            <h5>Recuerdame</h5>
+                        </div>
+                        <div class="olvido-contra">
+                            <h5 class="olvido-contraseña">¿Ha olivdado su contraseña?</h5>
+                        </div>
                     </div>
-                    <div class="campo-contraseña">
-                        <label class="label-tomas" for="">Contraseña<input type="password"
-                                placeholder="5 o mas caracteres"></label>
-                    </div>
-                    <div class="olvido-contra">
-                        <h5 class="olvido-contraseña">¿Ha olivdado su contraseña?</h5>
-                    </div>
-                    <button class="btn-logueado btn-padre">Continuar</button>
                 </form>
+                <div class="button-wrapper">
+                    <button class="btn-confirmacion">
+                        <p>Continuar</p>
+                        <div class="fill"></div>
+                        <div class="fa fa-check"></div>
+                    </button>
+                    <div class="ocultar registroExitoso">Sesión exitosa</div>
+                </div>
                 <h5>O</h5>
                 <button class="btn-google btn-padre">
                     <span></span>
@@ -475,6 +505,7 @@
 
 
     <script src="js/registro.js"></script>
+    <script src="js/ocultar.js"></script>
 </body>
 
 </html>
