@@ -52,7 +52,7 @@ let contenedorHome = document.querySelector(".contenedor");
 let contenedorLoader = document.querySelector(".contenedor-loading");
 let incrementador = document.querySelector(".contador");
 
-setInterval(() => {
+let temporizador = setInterval(() => {
     if (contador <= 100) {
         incrementador.innerHTML = contador + "%"
         contador++;
@@ -60,6 +60,8 @@ setInterval(() => {
     else {
         contenedorHome.classList.remove("ocultar");
         contenedorLoader.classList.add("ocultar");
+        clearInterval(temporizador)//Limpio en consola
+        console.log("hola")
     }
 
 }, tiempo)
