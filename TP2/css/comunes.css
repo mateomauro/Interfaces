@@ -224,8 +224,9 @@
 /* MENU DESPLEGADO PARA ESCRITORIO */
 
 .menu-desplegado {
-    width: 15%;
-    height: 100vh;
+    margin-top: 10vh;
+    width: 40%;
+    height: 90vh;
     background-color: #00004F;
     display: flex;
     flex-direction: column;
@@ -253,6 +254,10 @@
 .menu-desplegado-redes-sociales {
     height: 10%;
     width: 100%;
+}
+
+.menu-desplegado-redes-sociales p {
+    color: var(--color-blanco);
 }
 
 .menu-desplegado-redes-sociales .redes-sociales {
@@ -304,7 +309,7 @@
 /* PERFIL DESPLEGADO PARA ESCRITORIO*/
 
 .mi-perfil-desplegado {
-    width: 30%;
+    width: 60%;
     height: 40vh;
     background-color: #00004F;
     position: absolute;
@@ -374,34 +379,39 @@
     position: absolute;
     top: 0;
     z-index: 2;
+    align-items: center;
 }
 
 .contenedor-carrito {
     display: flex;
+    flex-direction: column;
     width: 80%;
     justify-content: space-between;
     margin-top: 10px;
+    align-items: center;
 }
 
 .contenedor-todas-compras {
-    width: 60%;
+    width: 100%;
 }
 
 .contenedor-compras {
     margin-bottom: 20px;
     display: flex;
     width: 100%;
-    height: 155px;
+    height: 100px;
     border-bottom: 2px solid #EFEFFF;
 }
 
 .contenedor-img-compra {
-    height: 100%;
+    height: 70%;
+    width: 110px;
     margin: 10px;
 }
 
 .contenedor-img-compra img {
-    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
 .contenedor-compra-carrito {
@@ -436,7 +446,7 @@
     height: 30%;
     width: 100%;
     display: flex;
-    align-items: end;
+    align-items: start;
 }
 
 .imagen-carrito {
@@ -453,10 +463,12 @@
 .resumen-compra {
     color: #EFEFFF;
     margin-bottom: 10px;
+    width: 60%;
 }
 
 .titulo-resumen-compra {
     border-bottom: 2px solid #EFEFFF;
+    text-align: center;
 }
 
 .articulo {
@@ -500,6 +512,10 @@ h3 {
 /* PARA DESKTOP */
 
 @media (min-width: 1024px) {
+
+    .menu-desplegado {
+        width: 15%;
+    }
 
     /* HEADER PARA ESCRITORIO */
     .nav {
@@ -711,6 +727,152 @@ h3 {
         width: 100%;
         height: 100%;
     }
+
+
+    /* CARRITO PARA ESCRITORIO */
+
+    .seccion-carrito {
+        display: flex;
+        justify-content: center;
+        background-color: #00004F;
+        height: auto;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        z-index: 2;
+    }
+
+    .contenedor-carrito {
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        justify-content: space-between;
+        margin-top: 10px;
+        align-items: flex-start;
+    }
+
+    .contenedor-todas-compras {
+        width: 60%;
+    }
+
+    .contenedor-compras {
+        margin-bottom: 20px;
+        display: flex;
+        width: 100%;
+        height: 155px;
+        border-bottom: 2px solid #EFEFFF;
+    }
+
+    .contenedor-img-compra {
+        height: 100%;
+        width: auto;
+        margin: 10px;
+    }
+
+    .contenedor-img-compra img {
+        object-fit: cover;
+        width: auto;
+        height: auto;
+    }
+
+    .contenedor-compra-carrito {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 95%;
+    }
+
+    .titulo-compra {
+        color: #EFEFFF;
+    }
+
+    .btn-carrito {
+        border: none;
+        background-color: transparent;
+        color: #B0B0FF;
+        margin: 0 10px;
+    }
+
+    .btn-eliminar:hover {
+        color: var(--color-rojo);
+        cursor: pointer;
+    }
+
+    .btn-comprar:hover {
+        color: var(--color-verde);
+        cursor: pointer;
+    }
+
+    .contenedor-btn-compra {
+        height: 30%;
+        width: 100%;
+        display: flex;
+        align-items: end;
+    }
+
+    .imagen-carrito {
+        border: solid 1px white;
+    }
+
+    .contedor-agrego-compra {
+        display: flex;
+        align-items: center;
+        height: 70%;
+        margin: 0 5px;
+    }
+
+    .resumen-compra {
+        color: #EFEFFF;
+        margin-bottom: 10px;
+        width: auto;
+    }
+
+    .titulo-resumen-compra {
+        border-bottom: 2px solid #EFEFFF;
+    }
+
+    .articulo {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 5px 0;
+    }
+
+    .articulo p,
+    h3 {
+        padding: 0 5px;
+    }
+
+    .contenedor-btn-realizar-compra {
+        display: flex;
+        justify-content: center;
+    }
+
+    .btn-compra {
+        border: none;
+        padding: 5px;
+        border-radius: 10px;
+        outline: none;
+        background-color: #0000FF;
+        color: #EFEFFF;
+    }
+
+    .contenedor-cruz {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+    }
+
+    .icono-chico {
+        width: 24px;
+        height: 24px;
+    }
+
+    .mi-perfil-desplegado {
+        width: 30%;
+    }
+
 }
 
 
