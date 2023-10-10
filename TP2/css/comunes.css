@@ -7,34 +7,6 @@
     font-weight: 400;
 }
 
-/* textos para celular */
-
-.texto-body {
-    font-family: Inter;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    color: #EFEFFF;
-}
-
-.texto-chico {
-    font-family: Inter;
-    font-size: 11px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    color: #EFEFFF;
-}
-
-.texto-btn {
-    font-family: Roboto;
-    font-size: 10px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 0.84px;
-}
 
 /* HEADER PARA CELULAR */
 
@@ -152,6 +124,11 @@
     grid-template-rows: 80% 20%;
     grid-template-areas: "categoria ayuda pagos"
         "logo-copi logo-copi logo-copi";
+}
+
+.footer p {
+    cursor: pointer;
+    color: var(--color-blanco);
 }
 
 .logo-footer {
@@ -447,6 +424,11 @@
 
 .btn-eliminar:hover {
     color: var(--color-rojo);
+    cursor: pointer;
+}
+
+.btn-comprar:hover {
+    color: var(--color-verde);
     cursor: pointer;
 }
 
