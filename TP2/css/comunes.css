@@ -870,7 +870,7 @@ h3 {
     }
 
     .mi-perfil-desplegado {
-        width: 30%;
+        width: 25%;
     }
 
 }
@@ -879,7 +879,7 @@ h3 {
 /* PARA OCULTAR COSAS */
 
 .ocultar {
-    display: none;
+    display: none !important;
 }
 
 .ocultar-degradado {

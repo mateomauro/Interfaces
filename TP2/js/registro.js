@@ -41,8 +41,17 @@ document.addEventListener("DOMContentLoaded", function () {
                 registroExitoso.classList.add("aparecer");
             }, 1100);
             setTimeout(() => {
-                window.location.href = "http://127.0.0.1:5500/TP2/home.html";
+                window.location.href = "home.html";
             }, 2200);
         });
+    });
+});
+
+let btnHome = document.querySelectorAll(".btn-home-");
+
+btnHome.forEach(button => {
+    button.addEventListener("click", function (event) {
+        event.preventDefault();
+        window.location.href = "home.html";
     });
 });
